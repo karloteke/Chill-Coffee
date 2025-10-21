@@ -1,0 +1,48 @@
+/* Navbar general */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #6f4e37; /* café oscuro */
+  padding: 10px 20px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+}
+
+/* Logo */
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo-img {
+  width: 100px;
+  height: 100px;
+  margin-right: 30px;
+}
+
+.logo-text {
+  font-family: 'Permanent Marker', cursive; /* tipografía divertida, estilo gotas */
+  font-size: 50px;
+  color: #f5deb3; /* beige café claro */
+  text-decoration: none;
+}
+
+/* Links */
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links li a {
+  color: #f5deb3;
+  text-decoration: none;
+  font-family: 'Comic Neue', cursive;
+  font-size: 18px;
+  transition: color 0.3s, transform 0.3s;
+}
+
+.nav-links li a:hover {
+  color: #d2a679;
+  transform: scale(1.1);
+}
