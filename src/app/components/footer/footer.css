@@ -3,15 +3,21 @@
   color: #fff;
   padding: 20px 0;
   font-family: 'Arial', sans-serif;
-  text-align: center;
+  text-align:center;
   position:relative;
 }
 
 .footer-container {
   display: flex;
-  flex-direction: column;
-  gap: 15px;
+  flex-direction: row;
+  gap: 55px;
   align-items: center;
+  justify-content: space-around;
+  padding-top: 40px;
+}
+h2{
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 20px;
 }
 
 .footer-logo {
@@ -42,4 +48,5 @@
   margin-top: 10px;
   font-size: 0.9rem;
   color: #ccc;
+  padding-top: 20px;
 }
