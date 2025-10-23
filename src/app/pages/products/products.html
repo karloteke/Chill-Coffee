@@ -1,1 +1,13 @@
-<p>products works!</p>
+<section class="products-wrap">
+  <h2>Cafe para todos los gustos</h2>
+
+  <div class="grid">
+    <div class="card" *ngFor="let p of products">
+      <img [src]="p.img" [alt]="p.name" class="card-img" />
+      <h3>{{ p.name }}</h3>
+      <p>{{ p.description }}</p>
+      <p class="price">{{ p.price }} €</p>
+      <span class="type">{{ p.type }}</span>
+    </div>
+  </div>
+</section>
