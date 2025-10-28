@@ -1,6 +1,19 @@
 <header>
+  <div class="coffee-bar">
+    <p>Bienvenido a ChillCoffe </p>
+  </div>
+
+  <!-- Menu desplegable , pantallas pequeñas -->
   <nav class="navbar">
-    <ul class="nav-links">
+    <div class="hamburger" (click)="toggleMenu()">
+      <div class="line"></div>
+      <div class="line"></div>
+      <div class="line"></div>
+    </div>
+
+    
+  <!-- Menu desplegable , pantallas grandes -->
+    <ul class="nav-links" [class.active]="menuAbierto">
       <li><a routerLink="">Inicio</a></li>
       <li><a routerLink="/products">Productos</a></li>
       <li><a routerLink="/contact">Contacto</a></li>
@@ -10,12 +23,14 @@
       <img src="../../../assets/taza.png" alt="Taza de café" class="taza-img">
       <img src="../../../assets/logo.png" alt="Chill Coffee logo" class="logo-img">
     </div>  
+
      <div class="nav-icons">
       <a href="#" class="icon"><i class="fas fa-search"></i></a>
       <a routerLink="/cart" class="icon"><i class="fas fa-shopping-cart"></i></a>
     </div>
   </nav>
-  <div class="coffee-bar">
-    <p>Siguenos en las redes sociales</p>
+  
+  <div class="coffee-redes">
+    <p>Siguenos en redes sociales</p>
   </div>
 </header>

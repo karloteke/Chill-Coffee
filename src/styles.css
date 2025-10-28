@@ -1,16 +1,27 @@
-/* You can add global styles to this file, and also import other style files */
+/* Evita overflow horizontal en toda la web */
 html, body {
-  height: 100%;
-  margin: 0; /* eliminar márgenes por defecto */
+  margin: 0;
   padding: 0;
+  box-sizing: border-box; /* hace que padding y border no sumen al width */
+  overflow-x: hidden; /* bloquea cualquier scroll horizontal */
+  width: 100%;
 }
 
-:host {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh; /* altura completa de la ventana */
+/* Aplica box-sizing a todos los elementos */
+*, *::before, *::after {
+  box-sizing: inherit;
 }
 
-main {
-  flex: 1; /* ocupa todo el espacio entre header y footer */
+/* Imágenes y videos no se salgan del contenedor */
+img, video, iframe {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Contenedores principales */
+.container, .content, .header, .footer {
+  max-width: 100%;
+  width: 100%;
+  margin: 0 auto;
 }
