@@ -12,50 +12,50 @@ export class ProductsComponent {
  products = [
   {
     id: 1,
-    name: 'Espresso Intenso',
-    description: 'Café 100% arábica de tueste oscuro, sabor profundo y notas de cacao.',
-    price: 3.5,
-    img: 'assets/espressointenso.jpg',
+    name: 'Ethiopian Yirgacheffe',
+    description: 'Grano arábica de altura con notas florales, cítricas y un toque de jazmín. Perfil brillante y afrutado.',
+    price: 11.5,
+    img: 'assets/etiope.jpg',
     type: 'Grano'
   },
   {
     id: 2,
-    name: 'Latte Cremoso',
-    description: 'Mezcla suave con leche vaporizada y crema dorada. Ideal para la tarde.',
-    price: 4.2,
-    img: 'assets/latecremoso.jpg',
-    type: 'Cremoso'
+    name: 'Kenya AA Plus',
+    description: 'Grano de alta montaña, sabor brillante con notas a grosella negra y vino tinto. Final limpio y duradero.',
+    price: 13.0,
+    img: 'assets/aaplus.jpg',
+    type: 'Grano'
   },
   {
     id: 3,
-    name: 'Cold Brew Natural',
-    description: 'Café frío infusionado 12h, sabor suave y refrescante.',
-    price: 4.8,
-    img: 'assets/coldbrew.jpg',
-    type: 'Bebida fría'
+    name: 'Peru Andes Gold',
+    description: 'Café de altura cultivado en los Andes peruanos, con notas dulces de caramelo, avellana y un final limpio.',
+    price: 10.5,
+    img: 'assets/peru.jpg',
+    type: 'Grano'
   },
   {
     id: 4,
-    name: 'Cappuccino Clásico',
-    description: 'Equilibrio perfecto entre espresso, leche y espuma.',
-    price: 4.5,
-    img: 'assets/cappuccinoclasico.jpg',
-    type: 'Espumoso'
+    name: 'Mexico Chiapas Altura',
+    description: 'Grano arábica de cultivo orgánico, con aroma floral, cuerpo medio y sabores a cacao y almendra tostada.',
+    price: 9.8,
+    img: 'assets/chiapas.jpg',
+    type: 'Grano'
   },
   {
     id: 5,
-    name: 'Colombian Supremo',
-    description: 'Grano de origen colombiano, notas dulces de caramelo y cítricos.',
-    price: 8.9,
-    img: 'https://images.unsplash.com/photo-1509042239860-f550ce710b93?fit=crop&w=400&h=300',
+    name: 'Brazil Santos Bourbon',
+    description: 'Café brasileño de baja acidez y cuerpo medio, con notas de almendra y chocolate con leche.',
+    price: 9.9,
+    img: 'https://images.unsplash.com/photo-1459755486867-b55449bb39ff?fit=crop&w=400&h=300',
     type: 'Grano'
   },
   {
     id: 6,
-    name: 'Frappe Chocolate',
-    description: 'Café frappé con sirope de chocolate y crema batida.',
-    price: 9.5,
-    img: 'assets/frappuccino.jpg',
+    name: 'Panama Geisha Premium',
+    description: 'Exclusivo café Geisha con aroma floral, cuerpo sedoso y sabores a bergamota y miel. Edición limitada.',
+    price: 24.5,
+    img: 'assets/panama.jpg',
     type: 'Grano'
   },
   {
