@@ -1,15 +1,19 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
-@Component({
-  standalone: true,
-  selector: 'app-products',
-  templateUrl: './products.html',
-  styleUrls: ['./products.css'],
-  imports: [CommonModule]
-})
-export class ProductsComponent {
- products = [
+
+
+export interface Product {
+  id: number;
+  name: string;
+  description: string;
+  price: number;
+  img: string;
+  type: string;
+}
+
+
+export const PRODUCTS: Product[] = [
   {
     id: 1,
     name: 'Ethiopian Yirgacheffe',
@@ -107,4 +111,15 @@ export class ProductsComponent {
     type: 'Grano'
   }
 ];
+
+@Component({
+  standalone: true,
+  selector: 'app-products',
+  templateUrl: './products.html',
+  styleUrls: ['./products.css'],
+  imports: [CommonModule]
+})
+
+export class ProductsComponent {
+  products = PRODUCTS;
 }

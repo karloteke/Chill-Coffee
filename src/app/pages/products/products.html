@@ -1,13 +1,22 @@
-<section class="products-wrap">
-  <h2>Cafe para todos los gustos</h2>
+<section class="products-wrap" aria-labelledby="products-heading">
+  <h2 id="products-heading">Café para todos los gustos</h2>
 
-  <div class="grid">
-    <div class="card" *ngFor="let p of products">
-      <img [src]="p.img" [alt]="p.name" class="card-img" />
-      <h3>{{ p.name }}</h3>
-      <p>{{ p.description }}</p>
-      <p class="price">{{ p.price }} €</p>
-      <span class="type">{{ p.type }}</span>
-    </div>
+  <div class="grid" role="list">
+    <article class="card" *ngFor="let p of products" role="listitem">
+      <div class="card-media">
+        <img [src]="p.img" [alt]="p.name" class="card-img" loading="lazy" />
+        <span class="type" aria-label="Tipo de café">{{ p.type }}</span>
+      </div>
+
+      <header class="card-header">
+        <h3 class="card-title">{{ p.name }}</h3>
+        <p class="card-desc">{{ p.description }}</p>
+      </header>
+
+      <div class="card-footer">
+        <p class="price" aria-label="Precio">{{ p.price }} €</p>
+        <button class="btn">Comprar</button>
+      </div>
+    </article>
   </div>
 </section>

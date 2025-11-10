@@ -1,11 +1,11 @@
 <section class="hero">
-  <div class="hero-text">
-    <img src="assets/slider.png" alt="Chill Coffee imagen inicio">
-   
+  <div class="hero-slider" appParallax [ratio]="0.4">
+    <div class="hero-bg"></div>
     <div class="hero-content">
-      <h1>Bienvenido a ChillCoffee</h1>
-      <p>Granos de café seleccionados en las mejores fincas del mundo 
-        y tostado artesanalmente para resaltar su sabor único.</p>
+      <h1 >Café Premium</h1>
+      <p>
+        <strong>Granos de café seleccionados y tostados artesanalmente para resaltar su sabor único.</strong>
+      </p>
       <a routerLink="/products" class="btn-primary">Ver productos</a>
     </div>
   </div>
@@ -52,21 +52,18 @@
 <section class="featured">
   <h2>Productos Destacados</h2>
   <div class="product-cards">
-    <div class="card">
-      <img src="assets/espresso.png" alt="Espresso">
-      <h3>Espresso Clásico</h3>
-      <p>Intenso y aromático, preparado con nuestros granos seleccionados.</p>
-    </div>
-    <div class="card">
-      <img src="assets/late.png" alt="Latte">
-      <h3>Latte Cremoso</h3>
-      <p>La mezcla perfecta de espresso y leche cremosa.</p>
-    </div>
-    <div class="card">
-      <img src="assets/capuccino.png" alt="Cappuccino">
-      <h3>Cappuccino Tradicional</h3>
-      <p>Espuma suave y sabor equilibrado que encanta a todos.</p>
-    </div>
+     @for (p of featured; track p.id) {
+      <article class="card">
+        <img [src]="p.img" [alt]="p.name" class="card-img" loading="lazy" />
+        <h3>{{ p.name }}</h3>
+        <p>{{ p.description }}</p>
+        <div class="card-footer">
+          <span class="price">{{ p.price | currency:'EUR':'symbol' }}</span>
+          <a [routerLink]="['/products', p.id]" class="btn-primary">Comprar</a>
+        </div>
+        
+      </article>
+    }
   </div>
 </section>
 

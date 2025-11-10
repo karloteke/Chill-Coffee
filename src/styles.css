@@ -5,6 +5,7 @@ html, body {
   box-sizing: border-box; /* hace que padding y border no sumen al width */
   overflow-x: hidden; /* bloquea cualquier scroll horizontal */
   width: 100%;
+   min-height: 200vh
 }
 
 /* Aplica box-sizing a todos los elementos */
@@ -25,3 +26,11 @@ img, video, iframe {
   width: 100%;
   margin: 0 auto;
 }
+
+
+/* .no-scroll {
+  overflow: hidden !important;
+  position: fixed;
+  width: 100%;
+}
+ */

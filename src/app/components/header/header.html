@@ -3,7 +3,7 @@
     <p>Bienvenido a ChillCoffe </p>
   </div>
 
-  <!-- Menu desplegable , pantallas pequeñas -->
+  <!-- Hamburguesa, pantalla móvil -->
   <nav class="navbar">
     <div class="hamburger" (click)="toggleMenu()">
       <div class="line"></div>
@@ -12,22 +12,46 @@
     </div>
 
     
-  <!-- Menu desplegable , pantallas grandes -->
-    <ul class="nav-links" [class.active]="menuAbierto">
-      <li><a routerLink="">Inicio</a></li>
-      <li><a routerLink="/products">Productos</a></li>
-      <li><a routerLink="/contact">Contacto</a></li>
+  <!-- Menu, pantallas grandes -->
+    <ul class="nav-links">
+      <li><a routerLink="">INICIO</a></li>
+      <li><a routerLink="/products">PRODUCTOS</a></li>
+      <li><a routerLink="/contact">CONTACTO</a></li>
     </ul>
 
     <div class="center-logo">
       <img src="../../../assets/logo.png" alt="ChillCoffee logo" class="logo-img">
     </div>  
 
-     <div class="nav-icons">
+    <div class="nav-icons">
       <a href="#" class="icon"><i class="fas fa-search"></i></a>
       <a routerLink="/cart" class="icon"><i class="fas fa-shopping-cart"></i></a>
     </div>
-  </nav>
+  
+
+  <!-- Menú móvil (oculto por defecto) -->
+  <div class="mobile-menu" [class.active]="menuAbierto">
+  <ul>
+    <li>
+      <a routerLink="" routerLinkActive="active-link" [routerLinkActiveOptions]="{ exact: true }">INICIO</a>
+    </li>
+    <li>
+      <a routerLink="/products" routerLinkActive="active-link">PRODUCTOS</a>
+    </li>
+    <li>
+      <a routerLink="/contact" routerLinkActive="active-link">CONTACTO</a>
+    </li>
+  </ul>
+
+  <!-- Redes sociales -->
+  <div class="mobile-socials">
+    <p>Síguenos en redes</p>
+    <div class="social-icons">
+      <a href="#"><i class="fab fa-instagram"></i></a>
+    </div>
+  </div>
+</div>
+</nav>
   
   <div class="coffee-redes">
     <p>Siguenos en redes sociales</p>
