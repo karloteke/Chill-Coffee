@@ -1,93 +1,264 @@
-.contact-section {
-  max-width: 600px;
-  margin: 50px auto;
-  padding: 30px;
-  background: #f5efe6;
-  border-radius: 12px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+.banner-contact {
+  position: relative;
+  width: 100%;
+  height: 500px; 
+  overflow: hidden;
+}
+
+.banner-contact img {
+  width: 100%;
+  height: 500px;
+  object-fit: cover;
+  display: block;
+}
+
+.banner-contact::after {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-color: rgba(0, 0, 0, 0.4); 
+  pointer-events: none;
+}
+
+
+.contact-wrap{
+  display: grid;
+  gap: 40px;
+  color: var(--c-text);
+  background: linear-gradient(180deg, var(--c-cream), #fff);
+}
+
+.contact-hero{
+  position: relative;
+  border-radius: var(--radius);
+  padding: 48px 20px;
   text-align: center;
-  font-family: Arial, sans-serif;
-  color: #4b2e05;
+  overflow: hidden;
+  box-shadow: var(--shadow);
+}
 
-  h2 {
-    font-size: 32px;
-    margin-bottom: 10px;
-    color: #6b4226;
-  }
+.contact-hero h1{
+  font-size: 36px;
+  margin-bottom: 20px;    
+  color: #6b4226;  
+  font-family: 'Montserrat Alternates', system-ui, -apple-system, Segoe UI, Roboto, sans-serif;    
+}
 
-  .intro {
-    margin-bottom: 25px;
-    color: #7a5a3a;
-    font-size: 1rem;
-  }
+.contact-hero p{
+  font-size: 16px;
+  color: #6b4226;  
+  font-family: "Nunito", system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+  max-width: 1200px;
+  margin: 0 auto;
+}
 
-  form {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    text-align: left;
-  }
+.contact-grid, .faq-col{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  max-width: 2000px;
+  padding: 0px 50px;
+}
 
-  .form-group {
-    display: flex;
-    flex-direction: column;
+.contact-info{
+  background: var(--c-foam);
+  border: 1px solid var(--c-line);
+  border-radius: var(--radius);
+  padding: 24px;
+  box-shadow: var(--shadow);
+}
 
-    label {
-      font-weight: bold;
-      margin-bottom: 5px;
-      color: #7a5a3a;
-    }
+.contact-info h3{
+  margin: 0 0 12px 0;
+  color: #6b4226;
+  font-family: "Montserrat Alternates", system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+  font-size: 28px;
+}
 
-    input,
-    textarea {
-      border: 1px solid #d9b48f;
-      border-radius: 6px;
-      padding: 10px;
-      font-size: 1rem;
-      outline: none;
-      transition: border-color 0.2s ease;
+.info-list{
+  list-style: none;
+  padding: 0; 
+  margin: 0 0 14px 0;
+  display: grid; 
+  gap: 10px;
+  width: 300px;
+}
 
-      &:focus {
-        border-color: #a37b56;
-      }
-    }
-  }
+.info-list li{
+  display: grid;
+  grid-template-columns: 24px 1fr;
+  align-items: start;
+  gap: 10px;
+  color: #5a4637;
+}
 
-  .submit-btn {
-    background: #a37b56;
-    color: white;
-    border: none;
-    padding: 12px 20px;
+.info-list a{ 
+  color: #5a4637; 
+  text-decoration: none; 
+  border-bottom: 1px dotted #baa48f; 
+
+}
+
+.info-list a:hover{ 
+  color: var(--c-espresso); 
+}
+
+.social{
+  display: flex;
+  gap: 14px; 
+  margin: 12px 0 10px;
+}
+.social a{
+  padding: 6px 10px;
+  border-radius: 999px;
+  background: #f1e7dc;
+  color: var(--c-espresso);
+  text-decoration: none;
+  border: 1px solid var(--c-line);
+}
+.social a:hover{ 
+  background: #e9decf; 
+}
+
+.badge-note{
+  margin-top: 8px;
+  font-size: 13px;
+  color: #735b45;
+}
+
+.contact-card{
+  background: #fff;
+  border: 1px solid var(--c-line);
+  border-radius: var(--radius);
+  padding: 24px;
+  box-shadow: var(--shadow);
+  display: grid; 
+  gap: 16px;
+  margin-bottom: 50px;
+}
+
+.field{ 
+  display: grid; 
+  gap: 8px; 
+}
+
+.field.two{ 
+  grid-template-columns: 1fr 1fr; 
+  gap: 12px; }
+
+label{ 
+  font-weight: 600; 
+  color: var(--c-espresso); 
+}
+
+input, select, textarea{
+  width: 100%;
+  border: 1px solid var(--c-line);
+  border-radius: 10px;
+  padding: 12px 14px;
+  background: #f5f1ee;
+  color: var(--c-text);
+  transition: border-color .2s ease, box-shadow .2s ease, transform .08s ease;
+  outline: none;
+}
+
+input:focus, select:focus, textarea:focus{
+  border-color: var(--c-caramel);
+  box-shadow: 0 0 0 4px rgba(139,107,78,.15);
+}
+
+input:hover, select:hover, textarea:hover{
+  border-color: #d5c6b5;
+}
+
+.error{ color: #a04444; 
+  font-size: 13px; 
+}
+
+.btn-primary{
+  justify-self: start;
+  border: 1px solid #6e533d;
+  padding: 12px 18px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: transform .08s ease, filter .2s ease, box-shadow .2s ease;
+  box-shadow: 0 8px 16px rgba(74,51,37,.18);
+}
+
+.btn-primary:hover{ 
+  filter: brightness(1.05); 
+  box-shadow: 0 10px 22px rgba(74,51,37,.22); 
+}
+
+.btn-primary:active{ 
+  transform: translateY(1px); 
+}
+
+.legal{ 
+  font-size: 12px; 
+  color: #7b6451; 
+  margin: -6px 0 0; 
+}
+
+
+
+/* FAQs */
+.faq-section {
+    background-color: #f5f1ee;
+    padding: 2rem;
     border-radius: 8px;
-    font-size: 1rem;
-    cursor: pointer;
-    align-self: center;
-    transition: background 0.2s ease;
+    max-width: 4000px;
+    margin-top: 2rem auto;
+    font-family: Arial, sans-serif;
+    color: #5a4727;
+    box-shadow: 0 4px 8px rgb(0 0 0 / 0.1);
+    display: grid;
+    justify-content: center;
+}
 
-  }
+.faq-section h2 {
+  font-size: 36px;
+  margin-bottom: 20px;    
+  color: #6b4226;  
+  font-family: 'Montserrat Alternates', system-ui, -apple-system, Segoe UI, Roboto, sans-serif; 
+}
 
-  .success {
-    h3 {
-      color: #4b2e05;
-      margin-bottom: 10px;
-    }
+.faq-item {
+  margin-bottom: 1.25rem;
+  cursor: pointer;
+}
 
-    p {
-      color: #7a5a3a;
-      margin-bottom: 20px;
-    }
+.faq-item h3 {
+  color: #ab9680;
+  font-weight: 600;
+  margin-bottom: 0.3rem;
+  transition: color 0.3s ease;
+}
 
-    button {
-      background: #a37b56;
-      color: white;
-      border: none;
-      padding: 10px 18px;
-      border-radius: 6px;
-      cursor: pointer;
+.faq-item h3:hover {
+  color: #6b4226;
+}
 
-      &:hover {
-        background: #8b654a;
-      }
-    }
+.faq-item p {
+  margin: 0;
+  line-height: 1.4;
+  font-size: 0.95rem;
+}
+
+
+/* MEDIA QUERIES*/ 
+
+@media (max-width: 1200px) {
+  .contact-grid{
+    grid-template-columns: 1fr;
+    padding: 0 20px;
   }
 }
+
+
+
+
+
+
+
+

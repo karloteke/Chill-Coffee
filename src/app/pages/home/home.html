@@ -2,11 +2,8 @@
   <div class="hero-slider" appParallax [ratio]="0.4">
     <div class="hero-bg"></div>
     <div class="hero-content">
-      <h1 >Café Premium</h1>
-      <p>
-        <strong>Granos de café seleccionados y tostados artesanalmente para resaltar su sabor único.</strong>
-      </p>
-      <a routerLink="/products" class="btn-primary">Ver productos</a>
+      <h1 >Granos seleccionados cuidadosamente</h1>
+      <a routerLink="/products" class="btn-primary">PRODUCTOS</a>
     </div>
   </div>
 </section>
@@ -50,22 +47,23 @@
 </section>
 
 <section class="featured">
-  <h2>Productos Destacados</h2>
+  <h2 id="products-heading">Productos destacados</h2>
   <div class="product-cards">
      @for (p of featured; track p.id) {
       <article class="card">
         <img [src]="p.img" [alt]="p.name" class="card-img" loading="lazy" />
-        <h3>{{ p.name }}</h3>
-        <p>{{ p.description }}</p>
+        <h3 class="card-title">{{ p.name }}</h3>
+        <p class="card-desc">{{ p.description }}</p>
         <div class="card-footer">
           <span class="price">{{ p.price | currency:'EUR':'symbol' }}</span>
           <a [routerLink]="['/products', p.id]" class="btn-primary">Comprar</a>
-        </div>
-        
+        </div>  
       </article>
     }
   </div>
 </section>
+
+
 
 <section class="testimonials">
   <h2>Lo que dicen nuestros clientes</h2>

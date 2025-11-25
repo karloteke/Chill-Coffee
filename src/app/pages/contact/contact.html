@@ -1,32 +1,111 @@
-<section class="contact-section">
-  <h2>Contáctanos</h2>
-  <p class="intro">¿Tienes alguna pregunta, sugerencia o quieres saber más sobre nuestros cafés?</p>
+<div class="banner-contact">
+    <img src="../../../assets/banner-contact.jpg" alt="Imagen finca" class="finca-img">
+</div>  
+<section class="contact-wrap" aria-labelledby="contact-heading">
+  <div class="contact-hero">
+    <h1 class="contact-heading">Hablemos sobre café</h1>
+    <p>Pedidos de grano, suscripciones o colaboraciones: estamos a un sorbo de distancia.</p>
+  </div>
 
-  <form (ngSubmit)="onSubmit()" *ngIf="!submitted; else successMsg">
-    <div class="form-group">
-      <label for="name">Nombre</label>
-      <input id="name" name="name" [(ngModel)]="contact.name" required />
-    </div>
+  <div class="contact-grid">
+    <!-- Info lateral -->
+    <aside class="contact-info" aria-label="Información de contacto">
+      <h3>Chill Coffee</h3>
+      <ul class="info-list">
+        <li>
+          <span class="icon">✉️</span>
+          <a href="mailto:contacto@chillcoffee.com">contacto@chillcoffee.com</a>
+        </li>
+      </ul>
 
-    <div class="form-group">
-      <label for="email">Correo electrónico</label>
-      <input id="email" name="email" type="email" [(ngModel)]="contact.email" required />
-    </div>
+      <div class="social">
+        <a aria-label="Instagram" href="#">Instagram</a>
+      </div>
 
-    <div class="form-group">
-      <label for="message">Mensaje</label>
-      <textarea id="message" name="message" rows="5" [(ngModel)]="contact.message" required></textarea>
-    </div>
+      <div class="badge-note">Granos de especialidad • Tueste semanal</div>
+    </aside>
 
-    <button type="submit" class="submit-btn">Enviar mensaje</button>
-  </form>
+    <!-- Formulario -->
+    <form class="contact-card" novalidate (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm">
+      <div class="field">
+        <label for="name">Nombre</label>
+        <input id="name" name="name" type="text" ngModel required />
+        <small class="error" *ngIf="contactForm.submitted && !contactForm.controls['name']?.valid">
+          Escribe tu nombre
+        </small>
+      </div>
 
-  <ng-template #successMsg>
-    <div class="success">
-      <h3>¡Gracias por contactarnos! ☕</h3>
-      <p>Te responderemos lo antes posible.</p>
-      <button (click)="submitted = false">Enviar otro mensaje</button>
-    </div>
-  </ng-template>
+      <div class="field">
+        <label for="email">Email</label>
+        <input id="email" name="email" type="email" ngModel required email />
+        <small class="error" *ngIf="contactForm.submitted && !contactForm.controls['email']?.valid">
+          Email no válido
+        </small>
+      </div>
+
+      <div class="field two">
+        <div>
+          <label for="phone">Teléfono</label>
+          <input id="phone" name="phone" type="tel" ngModel />
+        </div>
+        <div>
+          <label for="topic">Interés</label>
+          <select id="topic" name="topic" ngModel>
+            <option value="pedido">Pedido particular</option>
+            <option value="suscripcion">Suscripción mensual</option>
+            <option value="mayorista">Al por mayor</option>
+            <option value="colaboracion">Colaboración</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="field">
+        <label for="message">Mensaje</label>
+        <textarea id="message" name="message" rows="5" ngModel required></textarea>
+        <small class="error" *ngIf="contactForm.submitted && !contactForm.controls['message']?.valid">
+          Cuéntanos en qué podemos ayudarte
+        </small>
+      </div>
+
+      <button type="submit" class="btn-primary">Enviar</button>
+      <p class="legal">Al enviar aceptas nuestra política de privacidad.</p>
+    </form>
+  </div>
 </section>
+
+
+
+<!-- FAQs -->
+<section class="faq-section">
+  <h2>Preguntas Frecuentes</h2>
+
+  <article class="faq-item">
+    <h3>¿Cuánto cuestan los gastos de envío?</h3>
+    <p>Los gastos de envío varían según la ubicación y el peso del pedido. Para pedidos superiores a 50€, el envío es gratuito dentro de la península.</p>
+  </article>
+
+  <article class="faq-item">
+    <h3>¿Cuánto tiempo tarda el envío?</h3>
+    <p>El tiempo estándar de entrega es de 2 a 5 días hábiles. En zonas remotas o temporadas altas puede tardar un poco más.</p>
+  </article>
+
+  <article class="faq-item">
+    <h3>¿A qué zonas realizan envíos?</h3>
+    <p>Realizamos envíos a toda España, incluyendo Ceuta, Melilla, Canarias, Baleares y zonas peninsulares.</p>
+  </article>
+
+  <article class="faq-item">
+    <h3>¿Puedo cambiar la dirección después de hacer el pedido?</h3>
+    <p>Si necesitas modificar la dirección, contáctanos lo antes posible. Si el paquete aún no ha salido, haremos el cambio sin problema.</p>
+  </article>
+
+  <article class="faq-item">
+    <h3>¿Qué hago si mi pedido no llega o llega dañado?</h3>
+    <p>Contacta con nuestro servicio de atención al cliente para resolver incidencias. Gestionamos reemplazos o devoluciones rápidamente.</p>
+  </article>
+</section>
+
+
+
+    
 

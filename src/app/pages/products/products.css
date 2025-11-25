@@ -14,16 +14,14 @@
 .products-wrap{
   padding: 24px;
   text-align: center;
-  font-family: "Inter", Arial, sans-serif;
-  background: var(--c-bg);
-  color: var(--c-ink);
+  
 }
 
 h2{
-  font-size: 34px;
-  margin-bottom: 36px;
-  color: var(--c-title);
-  letter-spacing: .2px;
+    font-size: 36px;
+    margin-bottom: 40px;
+    color: #6b4226;
+    font-family: "Montserrat Alternates", system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
 }
 
 .grid{
@@ -114,6 +112,7 @@ h2{
   font-size: 1.15rem;
   line-height: 1.35;
   letter-spacing: .1px;
+  font-family: "Montserrat Alternates", system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
 }
 
 .card-desc{
@@ -121,6 +120,7 @@ h2{
   font-size: .92rem;
   color: var(--c-ink);
   opacity: .9;
+  font-family: nunito, system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
 }
 
 .card-footer{
