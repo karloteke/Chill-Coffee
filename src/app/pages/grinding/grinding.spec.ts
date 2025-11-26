@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { Comments } from './comments';
+import { Grinding } from './grinding';
 
-describe('Comments', () => {
-  let component: Comments;
-  let fixture: ComponentFixture<Comments>;
+describe('Grinding', () => {
+  let component: Grinding;
+  let fixture: ComponentFixture<Grinding>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [Comments]
+      imports: [Grinding]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(Comments);
+    fixture = TestBed.createComponent(Grinding);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

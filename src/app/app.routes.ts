@@ -4,6 +4,7 @@ import { Footer } from './components/footer/footer';
 import { HomeComponent } from './pages/home/home';
 import { ProductsComponent } from './pages/products/products';
 import { ContactComponent } from './pages/contact/contact';
+import { Grinding } from './pages/grinding/grinding';
 
 export const routes: Routes = [
       { path: 'header', component: HeaderComponent },
@@ -11,4 +12,5 @@ export const routes: Routes = [
       { path: '', component: HomeComponent },
       { path: 'contact', component: ContactComponent },
       { path: 'products', component: ProductsComponent },
+      { path: 'grinding', component: Grinding},
 ];

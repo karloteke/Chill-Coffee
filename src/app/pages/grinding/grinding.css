@@ -1,0 +1,131 @@
+.banner-grinding{
+  position: relative;
+  overflow: hidden;
+  margin-left: 50px;
+  margin-right: 50px;
+}
+
+.banner-grinding img {
+  object-fit: cover;
+  display: block;
+  margin-bottom: 40px;
+  align-items: center;
+  justify-content: center;
+}
+
+.grain-hero{
+  position: relative;
+  border-radius: var(--radius);
+  padding: 48px 20px;
+  text-align: center;
+  overflow: hidden;
+  box-shadow: var(--shadow);
+}
+
+.grain-hero h2{
+  font-size: 36px;
+  margin-bottom: 20px;    
+  color: #6b4226;  
+  font-family: 'Montserrat Alternates', system-ui, -apple-system, Segoe UI, Roboto, sans-serif;    
+}
+
+.grain-hero p{
+  font-size: 16px;
+  color: #6b4226;  
+  font-family: "Nunito", system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+  max-width: 1350px;
+  margin: 0 auto;
+}
+
+/* CARDS MOLIENDA */
+
+.grind-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;                        
+  width: 100%;
+  max-width: 1350px;          
+  margin: 0 auto;                       
+}
+
+.grind-card {
+  background: linear-gradient(135deg, #fff8f0 60%, #ab9680 100%);
+  border-radius: 18px;
+  box-shadow: 0 2px 8px 0 rgba(62,39,35,0.10);
+  border: 1px solid color-mix(in oklab, var(--card-bg, #fff), #000 10%);
+  padding: 1.25rem;
+  box-shadow: 0 1px 2px rgba(0,0,0,.06), 0 4px 14px rgba(0,0,0,.06);
+  transition: transform .2s ease, box-shadow .2s ease, border-color .2s ease;
+  margin-bottom: 50px;
+}
+
+
+.grind-card:hover,
+.grind-card:focus-within {
+transform: translateY(-2px);
+border-color:#3e2723;
+}
+
+.grind-row {
+  display: flex;
+  align-items: center;     
+  justify-content: center; 
+  justify-content: space-between;               
+}
+
+.grind-title{
+  font-size: 20px;
+  font-weight: 400;
+  color: #6b4226;
+  font-family: "Montserrat Alternates", system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+  margin-left: 20px;
+}
+
+.grind-badge {
+    left: 12px;
+    bottom: 12px;
+    display: inline-block;
+    padding: 6px 10px;
+    background: linear-gradient(180deg, #b98a60, #8f6847);
+    color: #fff;
+    border-radius: 999px;
+    font-size: 0.78rem;
+    letter-spacing: .2px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, .15);
+    transition: transform .25s ease, box-shadow .25s ease;
+    font-family: "Montserrat Alternates", system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+}
+
+.grind-desc{
+  margin: 8px 0 0 0;
+  font-size: 15px;
+  color: #5a4637;
+  line-height: 1.5;
+  font-family: "Montserrat Alternates", system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+  margin-left: 30px;
+}
+
+.grind-tips{
+  margin-top: 15px;
+  font-size: 14px;
+  color: #735b45;
+  font-family: "Nunito", system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+  list-style: none;
+}
+
+.grind-tips li.destacado {
+  font-size: 14px;
+  color: #3e2723;
+  font-family: "Nunito", system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+  font-weight: 800;
+  max-width: fit-content;
+}
+
+/* MEDIA QUERIES*/ 
+
+@media (max-width: 1200px) {
+  .grind-grid {
+    grid-template-columns: 1fr;
+    padding: 0 20px;
+  }
+}
